@@ -1,0 +1,19 @@
+. = any single character (exception: return or new line characters)
+	eg: /.ar/
+	
+[] = characters set / character class
+   -> use hyphen to specify range
+   -> order doesn't matter
+     eg: /[Tt]he/
+		 [.] --> literal period
+		      
+[^ ] = negated character set
+	 -> any character except what's inside
+	   eg: /[^c]ar/
+	   
+* = zero or more repetitions of preceding matcher
+    eg: /a*/
+		   /[a-z]*/ (= Any nr of lowercase letters in a row)
+		   
++ = one or more repetitions of preceding character
+	eg: /c.+t/
